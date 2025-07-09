@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="./public/app.css"> <!-- for applying styling from public folder do the express.static -->
+</head>
+<body>
+    <h1>Welcome to the Page of <%= data.name %></h1>
+    <button>follow</button>
+    <button>message</button>
+
+   <p> followers: <%= data.followers %> &nbsp;&nbsp;&nbsp;&nbsp; following: <%= data.following %></p>
+   <hr>
+   <% for(let post of data.posts){ %>
+  
+      <img src="<%=post.image%>" alt="some image" >
+      <p> likes: <%=post.likes%> &nbsp;&nbsp;&nbsp; comments: <%= post.comments %></p>
+   
+  <% } %>
+    
+
+</body>
+</html>
